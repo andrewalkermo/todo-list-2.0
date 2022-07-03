@@ -1,0 +1,25 @@
+.todo-list-card-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.todo-list-card-list > h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.todo-list-card-list-container {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

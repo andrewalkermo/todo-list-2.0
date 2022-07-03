@@ -1,0 +1,76 @@
+.todo {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    min-width: 70%;
+    max-width: 100%;
+}
+
+.todo > * {
+    transition: 300ms;
+}
+
+.todo input[type="checkbox"] {
+    margin-right: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.todo input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.todo input[type="text"]::placeholder {
+    color: var(--secondary-color);
+}
+
+.todo input[type="text"]:focus, .todo input[type="text"]:hover {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.todo input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.todo input[type="checkbox"]:checked + input {
+    text-decoration: line-through;
+}
+
+.todo input[type="checkbox"]:checked + input:hover,
+.todo input[type="checkbox"]:checked + input:focus,
+.todo input[type="checkbox"]:checked + input:placeholder-shown {
+    text-decoration: none;
+}
+
+.todo > span.delete {
+    color: var(--tertiary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 10px;
+    opacity: 0;
+}
+
+.todo:hover > span.delete {
+    opacity: 1;
+}

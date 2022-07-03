@@ -1,0 +1,49 @@
+.todo-list-card {
+    flex-basis: 20%;
+    padding: 10px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    height: 5rem;
+    max-width: 80%;
+    cursor: pointer;
+    position: relative;
+}
+
+.todo-list-card span {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font: 1.5rem Roboto, sans-serif;
+    color: var(--tertiary-color);
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.todo-list-card:hover span {
+    opacity: 1;
+}
+
+.todo-list-card:hover {
+    box-shadow: 1px 3px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.todo-list-card h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
