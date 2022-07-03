@@ -10,7 +10,7 @@ import {
 } from '../../Api/TodoListAPI'
 import {create} from "../../Api/TodoAPI";
 import {update} from "../../Api/TodoListAPI";
-import {Link, Navigate, useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 function TodoList() {
     return (
@@ -45,7 +45,7 @@ function Todos() {
         onError: (err, newTodo, context) => {
             queryClient.setQueryData('todoList', context.previousTodos)
         },
-        onSettled: (data, err, newTodo) => {
+        onSettled: () => {
             queryClient.invalidateQueries('todoList')
         }
     });
