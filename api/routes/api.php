@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::resource('todo-lists', \App\Http\Controllers\TodoListController::class);
-Route::resource('todos', \App\Http\Controllers\TodoController::class);
+Route::middleware(['cors'])->group(function () {
+    Route::resource('todo-lists', \App\Http\Controllers\TodoListController::class);
+    Route::resource('todos', \App\Http\Controllers\TodoController::class);
+});
