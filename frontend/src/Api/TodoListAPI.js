@@ -1,7 +1,7 @@
 const url = process.env.REACT_APP_API_URL;
 
 export const getAll = () => {
-    return fetch(`${url}/todo-lists/`)
+    return fetch(`${url}/todo-lists`)
         .then(response => response.json())
         .then(data => {
                 return data;
